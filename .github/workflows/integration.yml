@@ -1,0 +1,29 @@
+name: Data Integration Automation
+
+on:
+  push:
+    paths:
+      - "incoming-data/**"  # Trigger workflow only if files in the incoming-data folder are updated
+
+jobs:
+  integrate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Run the Bash script
+      - name: Run data integration script
+        run: |
+          bash scripts/integrate.sh  # Path to your integration script
+
+      # Step 3: Commit and push the updated integrated file
+      - name: Commit and push updates
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+          git add db/integrated_data.csv
+          git commit -m "Automated update of integrated_data.csv"
+          git push
