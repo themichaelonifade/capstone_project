@@ -42,7 +42,7 @@ if ls $INCOMING_DATA/*.csv 1> /dev/null 2>&1; then
 
         # Record the number of rows added from the incoming file
         new_rows=$(wc -l < "$file")
-        added_rows=$((new_rows - initial_rows))
+        
 
         # Move the new file to the datahub folder
         mv "$file" "$DATA_HUB/"
@@ -50,7 +50,7 @@ if ls $INCOMING_DATA/*.csv 1> /dev/null 2>&1; then
 
         # Display row counts
         echo "Rows initially in the merged file: $initial_rows"
-        echo "Rows added from $filename: $added_rows"
+        echo "Rows added from $filename: $new_rows"
     done
 else
     echo "No new files found in $INCOMING_DATA."
