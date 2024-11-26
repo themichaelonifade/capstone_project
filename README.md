@@ -1,5 +1,5 @@
 # Data Integration Automation
----
+
 
 ## About the Project
 
@@ -20,5 +20,3 @@ Scalable: This system is built to handle more data as the team grows.
 Bash Scripting: For automating the integration.
 GitHub Actions: To trigger the automation whenever new data arrives
 
-
- cp -r "C:/Users/Victoria/Desktop/Valanche/TDI/TDI_DS_Capstone_Project/data-hub/data4" ./incoming-data/
