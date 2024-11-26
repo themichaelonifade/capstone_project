@@ -3,7 +3,7 @@ name: Data Integration Automation
 on:
   push:
     paths:
-      - "incoming-data/**"  # Trigger workflow only if files in the incoming-data folder are updated
+      - "data-hub/**"  # Trigger workflow only when files in the data-hub folder are updated
 
 jobs:
   integrate:
@@ -17,7 +17,7 @@ jobs:
       # Step 2: Run the Bash script
       - name: Run data integration script
         run: |
-          bash scripts/integrate.sh  # Path to your integration script
+          bash scripts/integrate.sh
 
       # Step 3: Commit and push the updated integrated file
       - name: Commit and push updates
