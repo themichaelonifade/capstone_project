@@ -11,15 +11,12 @@ The main goal here is to create an automated system using Bash scripting and Git
 
 ## What It Does
 
-Automates Data Merging: Instead of manually merging datasets, the process happens automatically.
-
-Triggered by New Data: GitHub Actions detects when new data is available and starts the integration process.
-
-Scalable: This system is built to handle more data as the team grows.
+* Automates Data Merging: Instead of manually merging datasets, the process happens automatically.
+* Triggered by New Data: GitHub Actions detects when new data is available and starts the integration process.
+* Scalable: This system is built to handle more data as the team grows.
 
 ## Tech Used
 
-Bash Scripting: For automating the integration.
-
+* Bash Scripting: For automating the integration.
 * GitHub Actions: To trigger the automation whenever new data arrives
 
