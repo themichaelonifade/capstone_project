@@ -3,7 +3,8 @@ name: Data Integration Automation
 on:
   push:
     paths:
-      - "data-hub/**"  # Trigger workflow only when files in the data-hub folder are updated
+      - "incoming-data/**"  # Trigger workflow if files in the incoming-data folder are updated
+      - "data-hub/**"  # Trigger workflow when files in the data-hub folder are updated
 
 jobs:
   integrate:
