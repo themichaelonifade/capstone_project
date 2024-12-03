@@ -23,8 +23,8 @@ jobs:
       # Step 3: Commit and push the updated integrated file
       - name: Commit and push updates
         run: |
-          git config user.name "GitHub Actions Bot"
-          git config user.email "actions@github.com"
+          git config user.name "Onifade Michael"
+          git config user.email "themichaelonifade@gmail.com"
           git add db/integrated_data.csv
           git commit -m "Automated update of integrated_data.csv"
           git push
